@@ -1,4 +1,7 @@
-# Tautan aplikasi Adaptable: https://tokonani.adaptable.app/
+# Nama: Pradipta Arya Pramudita - 2206083685
+# Kelas: PBP F
+---
+## Tautan aplikasi Adaptable: https://tokonani.adaptable.app/main/
 
 ### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 ---
@@ -15,8 +18,7 @@
 
 ### Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.
 ---
-request | response 
---- | ---
+<img src="/Assets/BaganPBP.jpg">
 
 ---
 
@@ -35,7 +37,7 @@ request | response
 </p>
 <p> <strong>MVT</strong>: Konsep arsitektur yang digunakan untuk merancang aplikasi web dan membagi menjadi tiga komponen yaitu Model, View, Template. Model dan View pada MVT serupa dengan yang ada pada MVC, tetapi Template adalah bagian yang membedakan, Template ini berisikan logika tampilan bagian interaktif. Template memisahkan tampilan logika dengan tampilan dari View.
 </p>
-<p> <strong>MVVM</strong>: Konsep arsitektur yang digunakan untuk merancang aplikasi web dan membagi menjadi tiga komponen yaitu Model, View, ViewModel. Model dan View pada MVT serupa dengan yang ada pada MVC, tetapi ViewModel adalah pembeda dari MVVM. ViewModel ini mengubah data model menjadi format yang dapat ditampilkan pada View.
+<p> <strong>MVVM</strong>: Konsep arsitektur yang digunakan untuk merancang aplikasi web dan membagi menjadi tiga komponen yaitu Model, View, ViewModel. Model dan View pada MVVM serupa dengan yang ada pada MVC dan MVT, tetapi ViewModel adalah pembeda dari MVVM. ViewModel ini mengubah data model menjadi format yang dapat ditampilkan pada View.
 </p>
 
 ---
