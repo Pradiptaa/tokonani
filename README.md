@@ -41,3 +41,45 @@
 </p>
 
 ---
+## ---Tugas 3---
+---
+### Apa perbedaan antara form POST dan form GET dalam Django?
+---
+<p> form POST bekerja dengan mengirim data sebagai bagian dari request body http, yang berarti data tidak dapat dilihat melalui URL, yang membuatnya lebih aman dari GET. Sementara itu, form GET bekerja dengan mengirim form sebagai query string yang terlihat melalu URL. Pengguna dapat melihat dan mengubah parameter dalam URL, sehingga form GET tidak aman untuk data-data sensitif.
+</p>
+
+---
+### Apa perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data?
+---
+<p> <strong> XML </strong> dirancang untuk pertukaran data dengan fokus pada fleksibilitas dan sifat deskriptif. Sementara <strong> JSON </strong> digunakan untuk pertukaran serial data yang ringan dan mudah digunakan dalam pengembangan. Lalu dengan <strong> HTML </strong> secara khusus digunakan untuk menentukan struktur dan presentasi sebuah web. Penggunaan ketiganya bergantung pada kebutuhan dan konteks penggunaannya. 
+</p>
+
+---
+### Mengapa JSON sering digunakan dalam pertukaran data antara aplikasi web modern?
+---
+<p> Hal pertama yang membuat JSON sering digunakan dalam pertukaran data antara aplikasi web modern adalah karena JSON memiliki syntax yang sederhana bagi kedua manusia dan mesin. Alasan lain adalah karena struktur JSON yang ringan sehingga payload lebih kecil dibandingkan dengan format lain seperti XML. Efisiensi ini penting untuk mengurangi waktu transfer data dan penggunaan bandwidth. JSON juga dapat merepresentasikan struktur data yang kompleks termasuk nested objects dan arrays. Fleksibilitas ini membuat JSON cocok untuk serialisasi beragam tipe data.
+</p>
+
+---
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+---
+<p> Diawali dengan menambah file python baru untuk membuat struktur dari form yang akan menerima data produk. Lalu dilanjut dengan membuat fungsi baru pada "views.py" yang akan menerima parameter request dan menghasilkan form yang berfungsi untuk menambah data. Setelah itu, modifikasi fungsi "show_main" yang sudah ada. Kemudian dilakukan penambahan path untuk mengakses fungsi baru yang sudah ada. Lalu membuat berkas HTML baru yang berfungsi untuk memunculkan form yang sudah dibuat, dan modifikasi main.html untuk menambahkan button. 
+</p>
+<p> Selanjutnya ditambahkan fungsi lain bernama "show_xml" untuk mengembalikan data dalam bentuk XML, dan dilanjutkan dengan menambah path baru untuk show_xml tersebut. Hal yang hampir sama juga dilakukan untuk mengembalikan data dalam bentuk JSON. Setelah itu, dilakukan juga penambahan fungsi untuk mengembalikan data berdasarkan ID dalam bentuk XML dan JSON. Lalu dilanjutkan dengan penambahan path-path baru pada "urls.py" sesuai dengan fungsi-fungsi baru yang telah dibuat.
+</p>
+
+---
+### Screenshot dari hasil akses URL pada Postman
+---
+<strong> 1. HTML </strong>
+<img src="/Assets/HTMLresponse.png">
+<strong> 2. XML </strong>
+<img src="/Assets/XMLresponse.png">
+<strong> 3. JSON </strong>
+<img src="/Assets/JSONresponse.png">
+<strong> 4. XML by ID </strong>
+<img src="/Assets/XMLIDresponse.png">
+<strong> 5. JSON by ID </strong>
+<img src="/Assets/JSONIDresponse.png">
+
+---
