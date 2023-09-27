@@ -3,6 +3,8 @@
 ---
 ## Tautan aplikasi Adaptable: https://tokonani.adaptable.app/main/
 ---
+## ---Tugas 2---
+---
 ### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 ---
 <p> Dimulai dengan membuat sebuah direktori lokal baru pada komputer dan membuat repositori baru pada github, lalu menghubungkan keduanya. Dilanjutkan dengan membuat virtual environment dengan "python venv", lalu membuat dependencies dan menginstall seluruh dependencies yang diperlukan. Setelah itu mengubah konfigurasi pada proyek django, dan proyek django sudah siap untuk dijalankan. 
@@ -81,5 +83,34 @@
 <img src="/Assets/XMLIDresponse.png">
 <strong> 5. JSON by ID </strong>
 <img src="/Assets/JSONIDresponse.png">
+
+---
+## ---Tugas 4---
+---
+### Apa itu Django UserCreationForm, dan jelaskan apa kelebihan dan kekurangannya?
+---
+<p> Django UserCreationForm adalah sebuah built-in form yang disediakan oleh Django untuk membantu dalam proses user registration pada sebuah aplikasi web. Beberapa kelebihan dari penggunaan Django UserCreationForm adalah UserCreationForm mudah digunakan dan terintegrasi dengan sistem authentication Django. Namun, UserCreationForm juga memiliki kekurangan yaitu keterbatasan dalam fungsionalitas dan belum tentu cocok untuk semua aplikasi. </p>
+
+---
+###  Apa perbedaan antara autentikasi dan otorisasi dalam konteks Django, dan mengapa keduanya penting?
+---
+<p> Dalam konteks Django, authentication atau autentikasi adalah proses verifikasi identitas pengguna yang bertujuan untuk mengetahui pengguna yang biasanya menggunakan username dan password. Sementara authorization atau otorisasi adalah proses memutuskan apa saja hal yang diizinkan kepada pengguna setelah melakukan autentikasi. proses otorisasi bertujuan untuk mengontrol akses bagi pengguna ke bagian-bagian yang sudah ditentukan. </p>
+<p> Kedua hal ini (autentikasi dan otorisasi) penting adanya karena dengan menggabungkan keduanya, developer dapat memastikan bahwa pengguna hanya dapat mengakses dan melakukan tindakan sesuai dengan peran dan haknya, sehingga meningkatkan keamanan dan integritas aplikasi. </p>
+
+---
+###  Apa itu cookies dalam konteks aplikasi web, dan bagaimana Django menggunakan cookies untuk mengelola data sesi pengguna?
+---
+<p>Cookies adalah salah satu mekanisme yang digunakan untuk menyimpan data dari sisi pengguna. Django menggunakan cookies untuk mengelola data sesi pengguna dengan menyimpan data seperti ID sesi dan preferensi pengguna. Django juga memungkinkan untuk mengubah konfigurasi cookies pada berbagai aspek seperti lamanya cookies, domain, dan lain-lain.</p>
+
+---
+###  Apakah penggunaan cookies aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai?
+---
+<p> Penggunaan cookies memiliki beberapa risiko yang harus diwaspadai seperti pencurian data yang terjadi jika cookies mengandung data-data sensitif seperti informasi pribadi pengguna. Penggunaan cookies juga terancam oleh serangan Cross-Site Request Forgery (CSRF). Serangan ini dapat memaksa pengguna untuk membuat permintaan HTTP yang tidak disengaja yang mengandung kode-kode autentikasi yang berpotensi mendapatkan akses tanpa izin. </p>
+
+---
+###  Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+---
+<p> PEngimplementasian diawali dengan import modul-modul yang diperlukan, lalu membuat function baru yang menerima request dari browser ke server untuk register. Dilanjutkan dengan membuat suatu file HTML ang akan menampilkan form register yang sudah dibuat. Lalu menambahkan path url untuk function tersebut. Ulangi langkah-langkah sebelumnya untuk function authentication dan login. Langkah yang sama juga dilakukan pada function logout. </p>
+<p> Pada HTML, dilakukan hal-hal yang berbeda, logout hanya membutuhkan hyperlink pada file "main.html". Otorisasi dialkukan dengan menggunakan modul login_required untuk membatasi akses. Dilanjutkan dengan membuat akun dan memasukkan data-data. Lalu menambahkan kode untuk menghubungkan suatu item dengan user. Kemudian melakukan beberapa perubahan pada "create_product pada "views.py" agar Django mengenali bahwa objek dimiliki User tersebut. Fungsi "show_main" juga berubah untuk hanya menunjukkan produk yang dimiliki user tersebut. Terakhir, hal yang dilakukan adalah untuk makemigrattions serta migrate dan git add, commit, push. </p>
 
 ---
