@@ -1,7 +1,52 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <title>Home</title>
+{% endblock meta %}
 
 {% block content %}
-    <h1>Welcome to tokonani</h1>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Hello, {{name}}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Options</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'main:logout' %}">Logout</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">-</a></li>
+              <li><a class="dropdown-item" href="#">-</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">-</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+    <h1>Welcome to tokonani,</h1>
     
     <h5>Name:</h5>
     <p>{{name}}</p>
@@ -17,6 +62,7 @@
         <th>Amount</th>
         <th>Description</th>
         <th>Date Added</th>
+        <th>Edit/Delete</th>
     </tr>
 
     {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
@@ -35,13 +81,22 @@
                     {% csrf_token %}
                     <button class="btn_bonus">-</button>
                 </form>
-                <form method="post" action="{% url 'main:remove_product' product.id %}">
-                    {% csrf_token %}
-                    <button class="btn_bonus">Delete</button>
-                </form>
+
             </td>
             <td>{{product.description}}</td>
             <td>{{product.date_added}}</td>
+            <td>
+                <a href="{% url 'main:edit_product' product.pk %}">
+                    <button class="btn_bonus">
+                        Edit
+                    </button>
+                </a>
+                <a href="{% url 'main:delete_product' product.pk %}">
+                      <button class="btn_bonus">
+                          Delete
+                      </button>
+                  </a>
+            </td>
         </tr>
     {% endfor %}
 </table>
@@ -49,13 +104,13 @@
 <br />
 
 <a href="{% url 'main:create_product' %}">
-    <button>
+    <button class = "btn_bonus">
         Add New Product
     </button>
 </a>
 <h5>Sesi terakhir login: {{ last_login }}</h5>
 <a href="{% url 'main:logout' %}">
-    <button>
+    <button class = "btn_bonus">
         Logout
     </button>
 </a>

@@ -1,0 +1,111 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a background color and center the content */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cad2c5;
+}
+
+/* Style the navigation bar */
+.navbar {
+    background-color: #007bff;
+}
+
+.navbar .navbar-brand {
+    color: #2f3e46;
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    color: #354f52;
+}
+
+.navbar .nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Style the main content container */
+.container {
+    background-color: #cad2c5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container h5 {
+    font-weight: bold;
+}
+
+.container p {
+    margin-bottom: 10px;
+}
+
+/* Style the product table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #84a98c; /* Change this color as desired */
+    text-align: center;
+}
+
+table th,
+table td {
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style the buttons */
+.btn {
+    background-color: #52796f;
+    color: #52796f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: #354f52;
+}
+
+.btn_bonus {
+    background-color: #52796f;
+    color: #cad2c5;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 5px;
+}
+
+.btn_bonus:hover {
+    background-color: #354f52;
+}
+
+/* Style the logout button */
+.logout-button {
+    margin-top: 20px;
+}
+
+/* Style the footer */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}

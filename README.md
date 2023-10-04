@@ -110,7 +110,64 @@
 ---
 ###  Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 ---
-<p> PEngimplementasian diawali dengan import modul-modul yang diperlukan, lalu membuat function baru yang menerima request dari browser ke server untuk register. Dilanjutkan dengan membuat suatu file HTML ang akan menampilkan form register yang sudah dibuat. Lalu menambahkan path url untuk function tersebut. Ulangi langkah-langkah sebelumnya untuk function authentication dan login. Langkah yang sama juga dilakukan pada function logout. </p>
+<p> Pengimplementasian diawali dengan import modul-modul yang diperlukan, lalu membuat function baru yang menerima request dari browser ke server untuk register. Dilanjutkan dengan membuat suatu file HTML ang akan menampilkan form register yang sudah dibuat. Lalu menambahkan path url untuk function tersebut. Ulangi langkah-langkah sebelumnya untuk function authentication dan login. Langkah yang sama juga dilakukan pada function logout. </p>
 <p> Pada HTML, dilakukan hal-hal yang berbeda, logout hanya membutuhkan hyperlink pada file "main.html". Otorisasi dialkukan dengan menggunakan modul login_required untuk membatasi akses. Dilanjutkan dengan membuat akun dan memasukkan data-data. Lalu menambahkan kode untuk menghubungkan suatu item dengan user. Kemudian melakukan beberapa perubahan pada "create_product pada "views.py" agar Django mengenali bahwa objek dimiliki User tersebut. Fungsi "show_main" juga berubah untuk hanya menunjukkan produk yang dimiliki user tersebut. Terakhir, hal yang dilakukan adalah untuk makemigrattions serta migrate dan git add, commit, push. </p>
 
 ---
+## ---Tugas 5---
+---
+### Jelaskan manfaat dari setiap element selector dan kapan waktu yang tepat untuk menggunakannya.
+---
+<p>
+<strong> Universal Selector (*): </strong> Universal selector adalah selector yang digunakan setiap element pada halaman web. Selector ini dapat digunakan saat menerapkan suatu sttyle terhadap setiap elemen pada halaman web. Uiversal selector bermanfaat untuk melakukan penerapan style secara global, debugging, melakukan reset default, dan menerapkan baseline konsisten.
+</p>
+<p> 
+<strong> Type selector: </strong> Type selector adalah selector yang memilih semua elemen dengan HTML tag spesifik. Selector ini dapat digunakan saat menerapkan suatu style kepada semua elemen dengan HTML tag yang spesifik (headings, paragraph, dll). Selector ini memiliki manfaat untuk semantic styling, simplisitas, dan menerapkan konsistensi.
+</p>
+<p>
+<strong> Class Selector: </strong> Class selector adalah selector yang digunakan untuk memilih elemn dari HTML berdasarkan value "class" yang didefiniskan terhadap masing-masing elemen. Selector ini digunakan ketika melakukan styling terhadap beberapa elemen dengan karakteristik visual yang sama, membuat style customization untuk komponen individual atau widget pada halaman web, dan untuk penerapan style pada elemen-elemen dengan HTML berbeda.
+</p>
+<p>
+<strong> ID Selector: </strong> ID selector digunakan saat ingin memilih suatu HTML berdasarkan atribut ID yang dimiliki. ID selector diawali dengan "#" diikuti dengan ID nya. ID selector digunakan ketika melakukan styling terhadap suatu elemen spesifik, membuat anchors untuk in-page navigation, dan menerapkan fungsionalitas JavaScript pada elemen spesifik.
+</p>
+
+---
+### Jelaskan HTML5 Tag yang kamu ketahui.
+---
+<p> <strong> header: </strong> Mendefinisikan kontainer untuk konten pengantar pada bagian atas halaman web
+</p>
+<p> <strong> nav: </strong> Mewakili bagian dari halaman web yang berisi link untuk navigasi
+</p>
+<p> <strong> main: </strong> Menenetukan konten utama dari dokumen
+</p>
+<p> <strong> section: </strong> Mendefinisikan pengelompokan tematis konten dalam dokumen
+</p>
+<p> <strong> footer: </strong> Mendefinisikan kontainer untuk konten pengantar pada bagian bawah halaman web
+</p>
+
+---
+### Jelaskan perbedaan antara margin dan padding.
+---
+Aspek | Margin | Padding
+--- | --- | ---
+Tujuan | Mengatur ruang kosong di luar border elemen dan mengatur ruang kosong antar border elemen dengan elemen lainnya | Mengatur ruang kosong antara elemen dengan bordernya
+Pengaruh thd Ukuran | Tidak mengubah ukuran elemen, hanya mengubah posisi | Mengubah ukuran elemen
+Penggunaan | Membuat ruang kosong antar elemen, membuat margin antar page, melakukan centering, mengatur layout dari elemen block-level | Membuat ruang kosong antar konten pada elemen, membuat button, containers dengan internal spacing, mengatur layout dari inline dan inline-block elements 
+
+---
+###  Jelaskan perbedaan antara framework CSS Tailwind dan Bootstrap. Kapan sebaiknya kita menggunakan Bootstrap daripada Tailwind, dan sebaliknya?
+---
+Aspek | CSS Tailwind | Bootstrap
+--- | --- | ---
+Approach | Utility-first approach yang berfokus pada penggunaan utility (class-class kecil yang menyediakan gaya atau fungsi tertentu) untuk membangun komponen dan tampilan. | Component-Based approach yang memisahkan fungsionalitas menjadi komponen-komponen tersendiri
+Costumization | Dapat diubah detail sesuai keinginan dan kebutuhan pengguna | Dapat dibuah tetapi ada batasan
+Kasus | Proyek yang membutuhkan desain dan kontrol terhadap style yang digunakan | Proyek yang memiliki desain konsisten dan standar
+
+---
+###  Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+---
+<p> - Hal pertama yang dilakukan adalah membuat file-file css baru untuk setiap html dalam main, lalu modifikasi file-file html dalam main untuk disambung dengan file-file css.
+</p>
+<p> - Kedua saya mencari color pallete yang cocok untuk penerapan css nya, kemudian saya modifikasi setiap file css.
+</p>
+<p> - Trial error untuk setiap komponen </p>
