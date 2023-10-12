@@ -3,24 +3,76 @@
 {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/edit_product.css' %}">
     <title>Edit Product</title>
 
 {% block content %}
 
-<h1>Edit Product</h1>
+<div class="card">
+    <h1>Edit Product</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Edit Product"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
 
-<form method="POST">
-    {% csrf_token %}
-    <table>
-        {{ form.as_table }}
-        <tr>
-            <td></td>
-            <td>
-                <input type="submit" value="Edit Product"/>
-            </td>
-        </tr>
-    </table>
-</form>
 
+<style>
+    /* Styles for the edit product page */
+body {
+    background-image: url('https://media.discordapp.net/attachments/451810271716180008/1161947412886200330/forest.jpg?ex=653a26db&is=6527b1db&hm=e5ca616b64212cad25c642406a7a12ed818b6252fc8a267794baa668fa69b983&=');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    background-color: #d8f3dc;
+    color: #1b4332;
+}
+
+h1 {
+    color: #1b4332;
+}
+
+form {
+    margin-top: 20px;
+}
+
+table {
+    margin: 0 auto;
+}
+
+td {
+    padding: 10px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #1b4332;
+    border-radius: 4px;
+    outline: none;
+}
+
+.edit-button {
+    background-color: #52b788;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #40916c;
+}
+
+</style>
 {% endblock %}

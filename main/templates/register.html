@@ -4,35 +4,100 @@
 {% block meta %}  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css/register.css' %}">
   <title>Register</title>
 {% endblock meta %}
 
 {% block content %}  
 
-<div class = "login">
-    
-    <h1>Register</h1>  
-
-        <form method="POST" >  
-            {% csrf_token %}  
-            <table>  
-                {{ form.as_table }}  
-                <tr>  
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Daftar"/></td>  
-                </tr>  
-            </table>  
-        </form>
-
-    {% if messages %}  
-        <ul>   
-            {% for message in messages %}  
-                <li>{{ message }}</li>  
-                {% endfor %}  
-        </ul>   
+<div class="card">
+    <h1>Register</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+            <tr>
+                <td></td>
+                <td><input type="submit" name="submit" value="Daftar" /></td>
+            </tr>
+        </table>
+    </form>
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
     {% endif %}
+</div>
 
-</div>  
+
+<style>
+/* Styles for the registration page */
+body {
+    background-image: url('https://media.discordapp.net/attachments/451810271716180008/1161966033960194118/forest2.jpg?ex=653a3832&is=6527c332&hm=cdf65e3f5fe20470ceb0f58daf2525928a6ba7c4323722fae69e4ecad4ab7382&=&width=1033&height=671');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    background-color: #d8f3dc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    color: #1b4332;
+}
+
+form {
+    margin-top: 20px;
+}
+
+table {
+    margin: 0 auto;
+}
+
+td {
+    padding: 10px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #1b4332;
+    border-radius: 4px;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #52b788;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #40916c;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    color: #1b4332;
+    margin-top: 5px;
+}
+
+</style>
 
 {% endblock content %}
