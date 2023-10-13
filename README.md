@@ -171,3 +171,34 @@ Kasus | Proyek yang membutuhkan desain dan kontrol terhadap style yang digunakan
 <p> - Kedua saya mencari color pallete yang cocok untuk penerapan css nya, kemudian saya modifikasi setiap file css.
 </p>
 <p> - Trial error untuk setiap komponen </p>
+
+---
+## --- Tugas 6 ---
+---
+### Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.
+---
+<p> Dalam synchronous programming, tindakan dilakukan secara berturut-turut, satu demi satu, dan jika tindakan sebelumnya belum selesai, dilakukan dengan penundaan. Ini memudahkan penulisan dan pemahaman program, tetapi bisa terasa lambat jika tindakan memerlukan waktu lama atau terjadi kesalahan. </p>
+<p> Sementara dalam asynchronous programming, tindakan dapat berjalan bersamaan tanpa penundaan, membuat program lebih cepat dan responsif. Namun, ini membuat penulisan dan pemahaman program lebih kompleks karena alur eksekusi tidak mengikuti urutan kode. </p>
+
+---
+### Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma event-driven programming. Jelaskan maksud dari paradigma tersebut dan sebutkan salah satu contoh penerapannya pada tugas ini.
+---
+<p>Paradigma event-driven programming mengatur alur program berdasarkan peristiwa seperti interaksi pengguna, sensor, atau pesan dari program lain, yang membuat program lebih responsif. Sebagai contoh, dalam paradigma ini, sebuah form web dapat mengirim data ke server tanpa perlu me-refresh halaman menggunakan XMLHttpRequest dan menanggapi peristiwa seperti klik, tekan, atau ubah dengan menampilkan hasil di elemen HTML tanpa harus terus-menerus menjalankan kode.</p>
+
+---
+### Jelaskan penerapan asynchronous programming pada AJAX.
+---
+<p>Asynchronous programming dalam konteks AJAX adalah metode yang memungkinkan aplikasi web berkomunikasi dengan server tanpa menunggu respons. Pendekatan ini meningkatkan efisiensi dan responsifitas aplikasi web karena tak perlu me-refresh halaman web saat ada permintaan data. Pada asynchronous programming dalam AJAX, JavaScript berfungsi sebagai bahasa pemrograman utama untuk mengirim dan menerima data dari server secara asinkron. Selain itu, JavaScript juga dapat mengubah tampilan antarmuka pengguna sesuai dengan data yang diterima atau dikirim, menciptakan pengalaman pengguna yang lebih dinamis dan interaktif.</p>
+
+---
+### Pada PBP kali ini, penerapan AJAX dilakukan dengan menggunakan Fetch API daripada library jQuery. Bandingkanlah kedua teknologi tersebut dan tuliskan pendapat kamu teknologi manakah yang lebih baik untuk digunakan.
+---
+* Fetch API lebih ringan dan kompatibel dengan browser modern, sedangkan jQuery cocok untuk browser lama.
+* Fetch API menggunakan Promise untuk mengelola respon asinkron, menghindari "callback hell," sementara jQuery menggunakan callback yang lebih fleksibel.
+* jQuery menyediakan metode lebih sederhana untuk tugas-tugas seperti pengiriman data JSON, sedangkan Fetch API memberikan lebih banyak kontrol dalam permintaan dan respons Ajax.
+* Fetch API memiliki metode bawaan untuk mengubah respons menjadi berbagai tipe data, sedangkan jQuery memerlukan penentuan jenis data di awal dengan opsi dataType.
+
+---
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+---
+<p>Dimulai dengan membuat container-container untuk card pada seluruh html. Lalu membuat fungsi baru pada views untuk get product dalam bentuk JSON. Setelah itu membuat fungsi getProduct pada JavaScript di main.html untuk mendapatkan product dalam bentuk JSON. Dilanjutkan dengan membuat fungsi untuk menampilkan seluruh product pada cards. Lalu membuat fungsi untuk mengubah tabel agar sesuai dengan AJAX. Lalu membuat modal sebagai tempat menambahkan product baru beserta button nya. Setelah itu membuat fungsi untuk menambahkan product saat button ditekan dan membuat event listener agar mendeteksi hal tersebut. Terakhir membuat function-function untuk menyesuaikan button/fitur yang sudah dibuat pada tugas-tugas sebelumnya. </p>

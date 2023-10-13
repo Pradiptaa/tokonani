@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<div class="card">
+<div class="card" style="margin-top: 75px;">
     <h1>Edit Product</h1>
     <form method="POST">
         {% csrf_token %}
@@ -23,17 +23,25 @@
     </form>
 </div>
 
-
 <style>
-    /* Styles for the edit product page */
+/* Different Styles for the edit product page */
 body {
-    background-image: url('https://media.discordapp.net/attachments/451810271716180008/1161947412886200330/forest.jpg?ex=653a26db&is=6527b1db&hm=e5ca616b64212cad25c642406a7a12ed818b6252fc8a267794baa668fa69b983&=');
+    background-image: url('https://media.discordapp.net/attachments/451810271716180008/1161966033960194118/forest2.jpg?ex=653a3832&is=6527c332&hm=cdf65e3f5fe20470ceb0f58daf2525928a6ba7c4323722fae69e4ecad4ab7382&=&width=1033&height=671');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: Arial, sans-serif;
+    background-color: #95d5b2;
+    color: #2d6a4f;
+}
+.card {
     background-color: #d8f3dc;
-    color: #1b4332;
+    margin: 0 auto;
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
 }
 
 h1 {
